@@ -21,9 +21,18 @@ def char_count():
 
     lower_words = main().lower()
     lower_chars = list(lower_words)
-    
-    for i in range(0, len(lower_chars)):
-        character_count[lower_chars[i]] = i
 
-    print(character_count)
-char_count()
+    for char in lower_chars:
+        if char in character_count:
+            character_count[char] += 1
+            else:
+            character_count[char] = 1
+    
+    return character_count
+
+print(char_count())
+
+
+
+
+
